@@ -7,7 +7,7 @@ Summary(tr.UTF-8):	GNU geliştirme araçları - AVR32 binutils
 Name:		crossavr32-binutils
 Version:	2.17
 Release:	0.6
-License:	GPL
+License:	GPL v2+
 Group:		Development/Tools
 Source0:	http://ftp.gnu.org/gnu/binutils/binutils-%{version}.tar.bz2
 # Source0-md5:	e26e2e06b6e4bf3acf1dc8688a94c0d1
@@ -18,6 +18,7 @@ Patch1:		%{name}-sreldyn-fix.patch
 #http://www.avr32linux.org/twiki/bin/viewfile/Main/DevelopmentTools?rev=1;filename=502-avr32-bfd-dont-allow-direct-refs-to-bss.patch.gz
 Patch2:		%{name}-bfd-dont-allow-direct-refs-to-bss.patch
 URL:		http://sources.redhat.com/binutils/
+BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bash
 BuildRequires:	bison
@@ -53,7 +54,8 @@ programów. Znajdują się tutaj między innymi assembler,
 konsolidator (linker), a także inne narzędzia do manipulowania
 binarnymi plikami programów i bibliotek.
 
-Ten pakiet zawiera wersję skrośną generującą kod dla Atmel AVR.
+Ten pakiet zawiera wersję skrośną generującą kod dla platformy Atmel
+AVR.
 
 %prep
 %setup -q -n binutils-%{version}
