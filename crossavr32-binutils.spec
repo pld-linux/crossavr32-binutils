@@ -23,7 +23,7 @@ BuildRequires:	automake
 BuildRequires:	bash
 BuildRequires:	bison
 BuildRequires:	flex
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 %ifarch sparc sparc32
 BuildRequires:	sparc32
 %endif
